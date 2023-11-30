@@ -6,7 +6,7 @@
 /*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:06:39 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/28 12:33:05 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 15:51:26 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_handler(int signal, siginfo_t *info, void *s)
 	static int	bit;
 	static int	i;
 
-	(void)info;
 	(void)s;
 	if (signal == SIGUSR1)
 		i |= (0x01 << bit);
