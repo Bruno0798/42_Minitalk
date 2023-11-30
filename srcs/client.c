@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 22:29:14 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/28 12:02:11 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:35:46 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_minitalk.h"
 
-void ft_send_bits(int pid, char i)
+void	ft_send_bits(int pid, char i)
 {
-	int bit;
+	int	bit;
 
 	bit = 0;
 	while (bit < 8)
@@ -28,9 +28,9 @@ void ft_send_bits(int pid, char i)
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (argc == 3)

@@ -6,13 +6,13 @@
 /*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:06:48 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/30 16:12:15 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:41:02 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_minitalk_bonus.h"
 
-static void	ft_confirm(int signal)
+void	ft_confirm(int signal)
 {
 	if (signal == SIGUSR1)
 		ft_printf("\033[0;32mBit Error!\033[0;32m\n", 1);

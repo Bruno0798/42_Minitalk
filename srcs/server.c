@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/26 22:35:01 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/28 12:05:13 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:38:38 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,23 @@
 #include <stdio.h>
 #include <signal.h>
 
-void ft_handler(int signal)
+void	ft_handler(int signal)
 {
-    static int bit = 0;
-    static int i = 0;
+	static int	bit = 0;
+	static int	i = 0;
 
-    if (signal == SIGUSR1)
-    {
-        i |= (0x01 << bit);
-    }
-    bit++;
-
-    if (bit == 8)
-    {
-        printf("%c", i);
-        bit = 0;
-        i = 0;
-    }
+	if (signal == SIGUSR1)
+		i |= (0x01 << bit);
+	bit++;
+	if (bit == 8)
+	{
+		printf("%c", i);
+		bit = 0;
+		i = 0;
+	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	(void)argv;
 	if (argc != 1)
