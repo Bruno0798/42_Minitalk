@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_minitalk_bonus.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:07:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/30 16:32:38 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:33:49 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,14 @@ void ft_handler(int signal);
  */
 
 static void	ft_confirm(int signal);
+/**
+ * @brief Signal handler function that processes incoming signals.
+ * 
+ * This function is responsible for handling the SIGUSR1 and SIGUSR2 signals.
+ * It prints a confirmation message to the console.
+ * 
+ * @param signal The signal received by the handler.
+ */
 
 
 #endif
