@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   server_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:06:39 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/30 15:51:26 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:15:19 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	ft_handler(int signal, siginfo_t *info, void *s)
 
 int	main(int argc, char **argv)
 {
+	int					pid;
 	struct sigaction	sig;
 
 	(void)argv;
@@ -41,11 +42,12 @@ int	main(int argc, char **argv)
 		ft_printf("\033[33mTry: ./server\033[0m\n");
 		return (0);
 	}
-	ft_printf("\033[94mPID\033[0m \033[96m->\033[0m %d\n", getpid());
+	pid = getpid();
+	ft_printf("\033[94mPID\033[0m \033[96m->\033[0m %d\n", pid);
 	ft_printf("\033[90mWaiting for a message...\033[0m\n");
+	sig.sa_flags = SA_SIGINFO;
 	sig.sa_sigaction = ft_handler;
 	sigemptyset(&sig.sa_mask);
-	sig.sa_flags = 0;
 	while (argc == 1)
 	{
 		sigaction(SIGUSR1, &sig, NULL);
