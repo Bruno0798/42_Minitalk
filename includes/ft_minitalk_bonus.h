@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_minitalk_bonus.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:07:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/28 12:08:43 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:32:38 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,26 @@
 
 #include "../libft/includes/libft.h"
 # include <signal.h>
+
+void ft_send_bits(int pid, char i);
+/**
+ * Sends each bit of a character to a process identified by its PID.
+ * 
+ * @param pid The process ID of the receiver process.
+ * @param i The character to be sent.
+ */
+
+void ft_handler(int signal);
+/**
+ * @brief Signal handler function that processes incoming signals.
+ * 
+ * This function is responsible for handling the SIGUSR1 and SIGUSR2 signals.
+ * It converts the received signals into a character and prints it to the console.
+ * 
+ * @param signal The signal received by the handler.
+ */
+
+static void	ft_confirm(int signal);
+
 
 #endif
