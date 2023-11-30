@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_minitalk_bonus.h                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bsousa-d <bsousa-d@student.42.fr>          +#+  +:+       +#+        */
+/*   By: bsousa-d <bsousa-d@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 12:07:58 by bsousa-d          #+#    #+#             */
-/*   Updated: 2023/11/30 16:43:26 by bsousa-d         ###   ########.fr       */
+/*   Updated: 2023/11/30 16:44:45 by bsousa-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,16 @@ void	ft_send_bits(int pid, char i);
  */
 
 void	ft_handler(int signal, siginfo_t *info, void *s);
-
+/**
+ * @brief Signal handler function that processes incoming signals.
+ * 
+ * This function is responsible for handling the SIGUSR1 and SIGUSR2 signals.
+ * It prints the received character to the console.
+ * 
+ * @param signal The signal received by the handler.
+ * @param info A pointer to a siginfo_t structure.
+ * @param s A pointer to a ucontext_t structure.
+ */
 
 void	ft_confirm(int signal);
 /**
